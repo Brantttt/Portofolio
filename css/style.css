@@ -41,6 +41,13 @@ header{
 
 .logo span{
     color: red;
+    font-size: 19px;
+}
+
+.logo a{
+    color: black;
+    font-size: 19px;
+    font-weight: bold;
 }
 
 nav.menu{
@@ -83,18 +90,17 @@ nav.menu a.ativo{
 footer{
     background-color: #800020;
     color:#ffff;
+    bottom: 0;
+    width: 100;
     text-align: center;
-    padding: 20px;
+    padding: 20px 0px;
     font-size: 14px;
+    margin-top: 100% ;
 }
 
 footer a{
     color: red;
     text-decoration: none;
-}
-
-article.eu{
-    text-align: center; /* Nao funcionou */
 }
 
 .projetos{
@@ -125,10 +131,29 @@ article.eu{
     box-shadow: 0 6px 14px;
 }
 .proj img{
-    width: 100%;
+    display: block;
+    margin: 0 auto;
+    width: 30%;
     height: 100px;
     object-fit: contain;
     background-color: #ffff;
-    border-radius: 6px;
+    border-radius: 10px;
     margin-bottom: 10px;
+    box-shadow:  0 3px 8px;
+
+}
+
+.sobre img{
+    border-radius: 10px;
+    box-shadow: 0 3px 8px;
+    margin-bottom: 10px;
+    height: auto;
+    width: 10%;
+}
+
+.contato{
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
 }
