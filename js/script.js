@@ -43,5 +43,37 @@ BuscaProjetos.addEventListener("input", function(){
     renderizarProjetos(filtrados);
 
 })
+
+const formulario = document.querySelector('form');
+
+formulario.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const dados = {
+        nome: document.getElementById('nome').value,
+        email: document.getElementById('email').value,
+        mensagem: document.getElementById('mensagem').value
+    };
+
+    try {
+        const resposta = await fetch('http://localhost:3000/mensagem', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(dados) // Envia como JSON
+        });
+
+        const resultado = await resposta.json();
+
+        if (resposta.ok) {
+            alert(resultado.msg);
+            formulario.reset();
+        } else {
+            alert("Erro: " + resultado.erro);
+        }
+    } catch (error) {
+        alert("Erro ao conectar com o servidor.");
+    }
+});
+
   
 carregarProjetos();

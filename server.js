@@ -42,4 +42,30 @@ if(process.env.NODE_ENV == "production"){
     sessionConfig.cookie.secure = false
 }
 
+const express = require('express');
+const db = require('./db');
+
+app.use(express.json());
+
+// Adaptando a rota com Async/Await e Banco de Dados
+app.post('/mensagem', async (req, res) => {
+    const { nome, email, mensagem } = req.body;
+
+    if (!nome || !email || !mensagem) {
+        return res.status(400).json({ erro: "Todos os campos são obrigatórios." });
+    }
+
+    try {
+        const sql = "INSERT INTO contatos (nome, email, mensagem) VALUES (?, ?, ?)";
+        await db.query(sql, [nome, email, mensagem]); // Inserção real (3.6)
+        
+        res.status(201).json({ status: "sucesso", msg: "Mensagem enviada com sucesso!" });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ status: "erro", msg: "Erro ao salvar no banco." });
+    }
+});
+
+app.listen(3000, () => console.log("Servidor rodando na porta 3000"));
+
 app.use(session(sessionConfig))

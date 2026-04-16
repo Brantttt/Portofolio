@@ -1,14 +1,14 @@
 [
     {
-        "nome": "Meu Portfólio",
+        "nome": "Café Central",
         "descricao": "Site criado com HTML, CSS e JS.",
-        "imagem": "img/portfolio.jpg",
-        "github": "https://github.com"
+        "imagem": "../img/lgcf.jpeg",
+        "github": "https://github.com/Brantttt/Portofolio.git"
     },
     {
-        "nome": "Sistema de Login",
-        "descricao": "Projeto focado em Node.js e Express.",
-        "imagem": "img/login.jpg",
-        "github": "https://github.com"
+        "nome": "Diaristas Brants",
+        "descricao": "Projeto feito em Quant-ux e Documentação.",
+        "imagem": "../img/lgdrst.jpeg",
+        "github": "https://github.com/Brantttt/Portofolio.git"
     }
 ]
