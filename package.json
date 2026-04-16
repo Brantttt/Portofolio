@@ -1,0 +1,31 @@
+{
+  "name": "portofolio",
+  "version": "1.0.0",
+  "description": "meu primeiro portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "kkkk"
+  },
+  "author": "daniel brant",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brantttt/Portofolio.git"
+  },
+  "keywords": [
+    "1234"
+  ],
+  "bugs": {
+    "url": "https://github.com/Brantttt/Portofolio/issues"
+  },
+  "homepage": "https://github.com/Brantttt/Portofolio#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "mysql2": "^3.22.0",
+    "session": "^0.1.0"
+  }
+}

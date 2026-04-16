@@ -1,0 +1,14 @@
+[
+    {
+        "nome": "Meu Portfólio",
+        "descricao": "Site criado com HTML, CSS e JS.",
+        "imagem": "img/portfolio.jpg",
+        "github": "https://github.com"
+    },
+    {
+        "nome": "Sistema de Login",
+        "descricao": "Projeto focado em Node.js e Express.",
+        "imagem": "img/login.jpg",
+        "github": "https://github.com"
+    }
+]
